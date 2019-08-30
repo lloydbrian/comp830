@@ -3,11 +3,18 @@
  */
 package comp830.lloyd.hw1;
 
+import java.util.Arrays;
+import java.util.List;
+
+import comp830.lloyd.util.MemoryUtilityCheck;
+
 /**
- * @author lloydbrian
- *
+ * @author lloydbriantech 2019
+ * UNH MS 2019
  */
 public class CountVowels {
+
+	MemoryUtilityCheck mem = new MemoryUtilityCheck();
 
 	private final String[] VOWELS = {"a", "e", "i", "o", "u"};
 	
@@ -20,9 +27,19 @@ public class CountVowels {
 	 * @return int count of vowels
 	 */
 	public int doWork(String inputString) {
-		int dW = 0;
+		int vCount = 0;
+		if (inputString == null || inputString.length() <= 0) return vCount;
 		
-		return dW;
+		char[] iS = inputString.toCharArray();
+
+		System.out.println("Total App Memory: " + mem.getTotalMemory() + " MB");
+		List<String> cList = Arrays.asList(VOWELS);
+		for (char i: iS) {
+			if(cList.contains(String.valueOf(i))) { vCount++; }
+		}
+		System.out.println("Total App Free Mem: " + mem.getFreeMemory() + " MB");
+		
+		return vCount;
 	}
 	
 	
@@ -30,7 +47,8 @@ public class CountVowels {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		CountVowels cV = new CountVowels();
+		System.out.println(cV.doWork("abc123asdabnsdfasfuiuo"));
 
 	}
 

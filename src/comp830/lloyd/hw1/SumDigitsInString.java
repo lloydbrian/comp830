@@ -3,11 +3,15 @@
  */
 package comp830.lloyd.hw1;
 
+import comp830.lloyd.util.*;
+
 /**
- * @author lloydbrian
- *
+ * @author lloydbriantech 2019
+ * UNH MS 2019
  */
 public class SumDigitsInString {
+	
+	MemoryUtilityCheck mem = new MemoryUtilityCheck();
 	
 	/**
 	 * Scan each character of a a string and return the sum of all digits in 
@@ -22,12 +26,15 @@ public class SumDigitsInString {
 		int sum = 0;
 		if (theString == null || theString.length() <= 0) return sum;
 		
-		char sChar[] = theString.toCharArray();				
+		char sChar[] = theString.toCharArray();
+
+		System.out.println("Total App Memory: " + mem.getTotalMemory() + " MB");
 		for (char sC: sChar) {
 			if (Character.isDigit(sC)) {
 				sum  += Integer.parseInt(String.valueOf(sC));
 			}
 		}	
+		System.out.println("Total App Free Mem: " + mem.getFreeMemory() + " MB");
 		return sum;
 	}
 	
@@ -35,9 +42,8 @@ public class SumDigitsInString {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		SumDigitsInString sumDig = new SumDigitsInString();
-		System.out.println(sumDig.doWork("102011"));
+		System.out.println(sumDig.doWork("abc9asdf!@#!@102011"));
 
 	}
 

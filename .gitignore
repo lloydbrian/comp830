@@ -11,6 +11,7 @@
 *.key
 *.jar
 *.ear
+*.log
 
 # Flask stuff:
 instance/

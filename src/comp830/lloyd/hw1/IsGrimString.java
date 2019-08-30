@@ -4,8 +4,8 @@
 package comp830.lloyd.hw1;
 
 /**
- * @author lloydbrian
- *
+ * @author lloydbriantech 2019
+ * UNH MS 2019
  */
 public class IsGrimString {
 
