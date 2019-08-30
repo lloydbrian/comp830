@@ -1,14 +1,13 @@
 # User-specific configuration
 *.classpath
 
-
 # Byte-compiled / optimized / DLL files
 *.class
 
-# Templates and Archives
-*Template*.txt
+# Archives and Logs
 *nohup*
 *.tar.gz
+*.zip
 *.key
 *.jar
 *.ear
