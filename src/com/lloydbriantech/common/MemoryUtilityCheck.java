@@ -1,7 +1,7 @@
 /**
  * 
  */
-package comp830.lloyd.util;
+package com.lloydbriantech.common;
 
 /**
  * @author lloydbriantech 2019

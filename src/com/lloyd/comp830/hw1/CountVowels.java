@@ -1,12 +1,12 @@
 /**
  * 
  */
-package comp830.lloyd.hw1;
+package com.lloyd.comp830.hw1;
 
 import java.util.Arrays;
 import java.util.List;
 
-import comp830.lloyd.util.MemoryUtilityCheck;
+import com.lloydbriantech.common.MemoryUtilityCheck;
 
 /**
  * @author lloydbriantech 2019
@@ -14,9 +14,17 @@ import comp830.lloyd.util.MemoryUtilityCheck;
  */
 public class CountVowels {
 
-	MemoryUtilityCheck mem = new MemoryUtilityCheck();
-
+	MemoryUtilityCheck mem = new MemoryUtilityCheck();	
 	private final String[] VOWELS = {"a", "e", "i", "o", "u"};
+	private static String className = "";
+	private static String pfixLog  = "";
+	
+	// Constructor
+	CountVowels(){
+		className = this.getClass().getName();
+		pfixLog = "[" + className + "]: ";
+	}
+	
 	
 	/**
 	 * Returns the number of vowels in a string.
@@ -32,12 +40,12 @@ public class CountVowels {
 		
 		char[] iS = inputString.toCharArray();
 
-		System.out.println("Total App Memory: " + mem.getTotalMemory() + " MB");
+		System.out.println(pfixLog + "Total App Memory: " + mem.getTotalMemory() + " MB");
 		List<String> cList = Arrays.asList(VOWELS);
 		for (char i: iS) {
-			if(cList.contains(String.valueOf(i))) { vCount++; }
+			if(cList.contains(String.valueOf(i).toLowerCase())) { vCount++; }
 		}
-		System.out.println("Total App Free Mem: " + mem.getFreeMemory() + " MB");
+		System.out.println(pfixLog + "Total App Free Mem: " + mem.getFreeMemory() + " MB");
 		
 		return vCount;
 	}
@@ -48,7 +56,7 @@ public class CountVowels {
 	 */
 	public static void main(String[] args) {
 		CountVowels cV = new CountVowels();
-		System.out.println(cV.doWork("abc123asdabnsdfasfuiuo"));
+		System.out.println(pfixLog + cV.doWork("Abc123asdabnsdfasfuiuo"));
 
 	}
 

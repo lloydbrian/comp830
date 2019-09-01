@@ -1,9 +1,9 @@
 /**
  * 
  */
-package comp830.lloyd.hw1;
+package com.lloyd.comp830.hw1;
 
-import comp830.lloyd.util.*;
+import com.lloydbriantech.common.MemoryUtilityCheck;
 
 /**
  * @author lloydbriantech 2019
@@ -12,6 +12,15 @@ import comp830.lloyd.util.*;
 public class SumDigitsInString {
 	
 	MemoryUtilityCheck mem = new MemoryUtilityCheck();
+	private static String className = "";
+	private static String pfixLog  = "";
+	
+	// Constructor
+	SumDigitsInString(){
+		className = this.getClass().getName();
+		pfixLog = "[" + className + "]: ";
+	}
+	
 	
 	/**
 	 * Scan each character of a a string and return the sum of all digits in 
@@ -28,13 +37,13 @@ public class SumDigitsInString {
 		
 		char sChar[] = theString.toCharArray();
 
-		System.out.println("Total App Memory: " + mem.getTotalMemory() + " MB");
+		System.out.println(pfixLog + "Total App Memory: " + mem.getTotalMemory() + " MB");
 		for (char sC: sChar) {
 			if (Character.isDigit(sC)) {
 				sum  += Integer.parseInt(String.valueOf(sC));
 			}
 		}	
-		System.out.println("Total App Free Mem: " + mem.getFreeMemory() + " MB");
+		System.out.println(pfixLog + "Total App Free Mem: " + mem.getFreeMemory() + " MB");
 		return sum;
 	}
 	
@@ -43,7 +52,7 @@ public class SumDigitsInString {
 	 */
 	public static void main(String[] args) {
 		SumDigitsInString sumDig = new SumDigitsInString();
-		System.out.println(sumDig.doWork("abc9asdf!@#!@102011"));
+		System.out.println(pfixLog + sumDig.doWork("abc9asdf!@#!@102011"));
 
 	}
 
