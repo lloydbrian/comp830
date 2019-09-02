@@ -55,9 +55,10 @@ public class CountVowels {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		/*
 		CountVowels cV = new CountVowels();
 		System.out.println(pfixLog + cV.doWork("Abc123asdabnsdfasfuiuo"));
-
+		*/
 	}
 
 }

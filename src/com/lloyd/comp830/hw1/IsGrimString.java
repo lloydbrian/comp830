@@ -55,14 +55,14 @@ public class IsGrimString {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-
+		/*
 		IsGrimString isGS = new IsGrimString();
 		System.out.println(pfixLog + isGS.doWorkReturnBoolean("grGRasdfasfa")); //true
 		System.out.println(pfixLog + isGS.doWorkReturnBoolean("grabcgRasdfasfa")); //false
 		System.out.println(pfixLog + isGS.doWorkReturnBoolean("hello grgr bbbb gr")); //false
 		System.out.println(pfixLog + isGS.doWorkReturnBoolean("randomgrgrnoisegrgrhappy")); //true
 		System.out.println(pfixLog + isGS.doWorkReturnBoolean("random")); //false
-		
+		*/
 	}
 
 }

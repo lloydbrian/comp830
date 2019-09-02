@@ -51,9 +51,10 @@ public class SumDigitsInString {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		/*
 		SumDigitsInString sumDig = new SumDigitsInString();
 		System.out.println(pfixLog + sumDig.doWork("abc9asdf!@#!@102011"));
-
+		*/
 	}
 
 }
