@@ -12,32 +12,33 @@ import com.lloydbriantech.common.MemoryUtilityCheck;
 public class HW1 {
 
 	MemoryUtilityCheck mem = new MemoryUtilityCheck();
+	CountVowels cV = null;
+	IsGrimString isGS = null;
+	SumDigitsInString sumDig = null;
+
 	private static String className = "";
 	private static String pfixLog  = "";
 
 	// Constructor
 	public HW1() {
+		cV = new CountVowels();
+		isGS = new IsGrimString();
+		sumDig = new SumDigitsInString();
+		
 		className = this.getClass().getName();
 		pfixLog = "[" + className + "]: ";
 	}
-
+	
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
 		HW1 newHw1 = new HW1();
-		
-		CountVowels cV = new CountVowels();
-		IsGrimString isGS = new IsGrimString();
-		SumDigitsInString sumDig = new SumDigitsInString();
-		
-		System.out.println(pfixLog + cV.doWork("Abc123asdabnsdfasfuiuo"));
-		System.out.println(pfixLog + isGS.doWorkReturnBoolean("grGRasdfasfa")); //true
-		System.out.println(pfixLog + isGS.doWorkReturnBoolean("grabcgRasdfasfa")); //false
-		System.out.println(pfixLog + sumDig.doWork("abc9asdf!@#!@102011"));
-
+				
+		System.out.println(pfixLog + newHw1.cV.doWork("Abc123asdabnsdfasfuiuo"));
+		System.out.println(pfixLog + newHw1.isGS.doWorkReturnBoolean("grGRasdfasfa")); //true
+		System.out.println(pfixLog + newHw1.isGS.doWorkReturnBoolean("grabcgRasdfasfa")); //false
+		System.out.println(pfixLog + newHw1.sumDig.doWork("abc9asdf!@#!@102011"));
 
 	}
 
