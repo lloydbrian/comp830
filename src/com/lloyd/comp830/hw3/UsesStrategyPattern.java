@@ -20,7 +20,7 @@ public class UsesStrategyPattern {
 	private ArrayList<Comp730830StringUtils> strategyObjects = null;
 	
 	/**
-	 * 
+	 * Constructor
 	 */
 	public UsesStrategyPattern() {
 		className = this.getClass().getName();
@@ -43,7 +43,7 @@ public class UsesStrategyPattern {
 	}
 	
 	/**
-	 * 
+	 * Method to clear contents of the strategyObjects if not empty
 	 */
 	public void clearStringOperations() {
 		if(!strategyObjects.isEmpty()) strategyObjects.clear();
@@ -52,7 +52,7 @@ public class UsesStrategyPattern {
 	
 	/**
 	 * 
-	 * @param stringToOperateOn
+	 * @param stringToOperateOn - String input to apply operations
 	 */
 	public void invokeStringOperations (String stringToOperateOn) {
 		if (stringToOperateOn != null && stringToOperateOn.length() >= 0 && strategyObjects.size() > 0) {
@@ -64,13 +64,5 @@ public class UsesStrategyPattern {
 			System.out.println(pfixLog + "No available operation for: " + stringToOperateOn);			
 		}
 	}	
-	
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
 
 }

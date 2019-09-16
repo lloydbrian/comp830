@@ -16,7 +16,7 @@ public class HW3 {
 	private static String pfixLog  = "";
 
 	/**
-	 * 
+	 * Constructor
 	 */
 	public HW3() {
 		className = this.getClass().getName();
