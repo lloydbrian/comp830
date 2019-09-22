@@ -110,6 +110,7 @@ public class HW4 {
 
 	public void setPlaySides(int playSides) {
 		this.playSides = playSides;
+		this.initializeListOfDices();
 	}
 
 	public void setGameRollTimes(int rollTimes) {
