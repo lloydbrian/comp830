@@ -34,11 +34,11 @@ public final class DiceRoller {
 		return diceRollerInstance;
 	}
 	
-	public void rollDice(Dice diceToRoll) {
+	public int rollDice(Dice diceToRoll) {
 		// Returns a pseudorandom int value between the 
 		// specified origin (inclusive) and the specified bound (exclusive)
 		int randSide = ThreadLocalRandom.current().nextInt(1, diceToRoll.getTotalSides() + 1);
-		diceToRoll.setTopSideNumber(randSide);
+		return randSide;
 	}
 	
 }

@@ -61,7 +61,7 @@ public class HW4 {
 			for(int t = 0; t < totalRollTimes; t++) {
 				for (Dice d: diceList) {
 					// Call singleton class to rolldice
-					DICE_ROLLER.rollDice(d);
+					d.setTopSideNumber(DICE_ROLLER.rollDice(d));
 					addToHashTable(d.getTopSideNumber());					
 				}
 			}
