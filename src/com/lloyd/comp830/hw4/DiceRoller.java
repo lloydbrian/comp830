@@ -38,18 +38,16 @@ public final class DiceRoller {
 		// Returns a pseudorandom int value between the 
 		// specified origin (inclusive) and the specified bound (exclusive)
 		int randSide = ThreadLocalRandom.current().nextInt(1, diceToRoll.getTotalSides() + 1);
+		diceToRoll.setTopSideNumber(randSide);
 		return randSide;
 	}
 
 	public int rollDice(ArrayList<Dice> dices) {
 		// Returns a pseudorandom int value between the 
 		// specified origin (inclusive) and the specified bound (exclusive)
-		//int randSide = ThreadLocalRandom.current().nextInt(1, diceToRoll.getTotalSides() + 1);
 		int sumRoll = 0;
 		for(Dice diceToRoll : dices) {
-			int randomN = ThreadLocalRandom.current().nextInt(1, diceToRoll.getTotalSides() + 1);
-			diceToRoll.setTopSideNumber(randomN);
-			sumRoll += randomN;
+			sumRoll += rollDice(diceToRoll);
 		}
 		return sumRoll;
 	}
