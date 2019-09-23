@@ -67,15 +67,15 @@ public class HW4 {
 		}
 	}
 
-	private void addToHashTable(int topSide) {
-		if(diceRollResult.containsKey(topSide)) {
-			System.out.println(pfixLog + "Hashtable has the key: " + topSide + " with FOUND count: " + diceRollResult.get(topSide));
-			int count = (int) diceRollResult.get(topSide) + 1;
-			diceRollResult.put(topSide, count);
-			System.out.println(pfixLog + "Hashtable has the key: " + topSide + " with UPDATED count: " + diceRollResult.get(topSide));
+	private void addToHashTable(int rolledTotal) {
+		if(diceRollResult.containsKey(rolledTotal)) {
+			System.out.println(pfixLog + "Hashtable has the key: " + rolledTotal + " with FOUND count: " + diceRollResult.get(rolledTotal));
+			int count = (int) diceRollResult.get(rolledTotal) + 1;
+			diceRollResult.put(rolledTotal, count);
+			System.out.println(pfixLog + "Hashtable has the key: " + rolledTotal + " with UPDATED count: " + diceRollResult.get(rolledTotal));
 		} else {
-			diceRollResult.put(topSide, 1);
-			System.out.println(pfixLog + "Hashtable does not have the key: " + topSide + ". NEW entry added with count of: " + diceRollResult.get(topSide));
+			diceRollResult.put(rolledTotal, 1);
+			System.out.println(pfixLog + "Hashtable does not have the key: " + rolledTotal + ". NEW entry added with count of: " + diceRollResult.get(rolledTotal));
 		}
 	}
 		
