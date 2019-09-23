@@ -4,7 +4,7 @@
 package com.lloyd.comp830.hw4;
 
 import java.util.concurrent.ThreadLocalRandom;
-
+import java.util.ArrayList;
 
 /**
  * @author lloydbriantech 2019
@@ -40,5 +40,19 @@ public final class DiceRoller {
 		int randSide = ThreadLocalRandom.current().nextInt(1, diceToRoll.getTotalSides() + 1);
 		return randSide;
 	}
+
+	public int rollDice(ArrayList<Dice> dices) {
+		// Returns a pseudorandom int value between the 
+		// specified origin (inclusive) and the specified bound (exclusive)
+		//int randSide = ThreadLocalRandom.current().nextInt(1, diceToRoll.getTotalSides() + 1);
+		int sumRoll = 0;
+		for(Dice diceToRoll : dices) {
+			int randomN = ThreadLocalRandom.current().nextInt(1, diceToRoll.getTotalSides() + 1);
+			diceToRoll.setTopSideNumber(randomN);
+			sumRoll += randomN;
+		}
+		return sumRoll;
+	}
+
 	
 }

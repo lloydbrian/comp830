@@ -59,11 +59,10 @@ public class HW4 {
 			System.out.println(pfixLog + "Resetting Game - DICES: " + getPlayDicesCount() + " SIDES: " + getPlaySides() + " ROLLTIMES: " + getGameRollTimes());
 		} else {
 			for(int t = 0; t < totalRollTimes; t++) {
-				for (Dice d: diceList) {
-					// Call singleton class to rolldice
-					d.setTopSideNumber(DICE_ROLLER.rollDice(d));
-					addToHashTable(d.getTopSideNumber());					
-				}
+				// call singleton class to roll dice with arg of arraylist
+				// result is the total number of all rolled dices in the list
+				int rolledTotal = (DICE_ROLLER.rollDice(diceList));
+				addToHashTable(rolledTotal);
 			}
 		}
 	}
