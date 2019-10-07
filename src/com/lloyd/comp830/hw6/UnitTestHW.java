@@ -10,6 +10,7 @@ import java.util.List;
  * Class to be unit tested
  * 
  * @author Prof. Nelson 2019
+ * Updated by Lloyd Dagoc with fixes as part of homework
  *
  */
 public class UnitTestHW {
