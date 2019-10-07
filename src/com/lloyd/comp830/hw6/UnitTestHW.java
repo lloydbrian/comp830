@@ -42,6 +42,7 @@ public class UnitTestHW {
 		// updated because what it should remove is b
 		// also remove() removes from an index and not the actual object
 		
+		numbersInData.remove(numbersInData.indexOf(b));
 		while(numbersInData.contains(b)) {
 			removeNumberFromList(b);
 		}
