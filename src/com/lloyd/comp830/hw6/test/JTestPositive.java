@@ -148,7 +148,7 @@ class JTestPositive {
 	 * with similar numbers added to the arraylist
 	 */
 	@Test
-	@DisplayName("2 Testing getAverage() through testGetAverage_Valid3(). 3 numbers. 2 same")
+	@DisplayName("6 Testing getAverage() through testGetAverage_Valid3(). 3 numbers. 2 same")
 	void testGetAverage_Valid3() {
 		testObj.addNumberToList(6);
 		testObj.addNumberToList(10);
@@ -168,7 +168,7 @@ class JTestPositive {
 	 * with similar numbers added to the arraylist
 	 */
 	@Test
-	@DisplayName("2 Testing getAverage() through testGetAverage_Valid4(). 3 numbers. 2 same")
+	@DisplayName("7 Testing getAverage() through testGetAverage_Valid4(). 3 numbers. 2 same")
 	void testGetAverage_Valid4() {
 		testObj.addNumberToList(6);
 		testObj.addNumberToList(10);
