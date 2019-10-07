@@ -42,9 +42,9 @@ public class UnitTestHW {
 		// original line numbersInDate.remove(a)
 		// updated because what it should remove is b
 		// also remove() removes from an index and not the actual object
-		
-		numbersInData.remove(numbersInData.indexOf(b));
+
 		while(numbersInData.contains(b)) {
+			numbersInData.remove(numbersInData.indexOf(b));
 			removeNumberFromList(b);
 		}
 	}

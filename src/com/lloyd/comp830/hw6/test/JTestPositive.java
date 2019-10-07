@@ -183,6 +183,27 @@ class JTestPositive {
 		);
 	}
 
+	/**
+	 * This test scenario is to test 
+	 * computation of getAverage()
+	 * with similar numbers added to the arraylist
+	 */
+	@Test
+	@DisplayName("8 Testing getAverage() through testGetAverage_Valid5(). 3 numbers. 2 same")
+	void testGetAverage_Valid5() {
+		testObj.addNumberToList(6);
+		testObj.addNumberToList(10);
+		testObj.addNumberToList(6);
+		testObj.removeNumberFromList(2);
+		testObj.computeSum();
+		testObj.computeNumberOfInts();
+		
+		assertAll("getAverage with same numbers added to the list",
+				() -> assertEquals(testObj.getAverage(), 7),
+				() -> assertNotEquals(testObj.getAverage(),10)
+		);
+	}
+
 	
 	
 }
