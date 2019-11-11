@@ -51,6 +51,11 @@ public final class DiceRoller {
 		}
 		return sumRoll;
 	}
+	
+	// new method for Mockito demonstration
+	public void setDiceRoller(DiceRoller dRoller) {
+		this.diceRollerInstance = dRoller;
+	}
 
 	
 }

@@ -18,7 +18,7 @@ import org.junit.jupiter.api.Test;
  * @author lloydbriantech 2019
  *
  */
-class JTestPositive {
+class HW6UnitTest {
 
 	UnitTestHW testObj;
 	
