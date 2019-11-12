@@ -22,6 +22,7 @@ public class ExamStateSandbox {
 		final String UNKNOWN_STATE = "-1";
 		final String ALIVE_STATE = "1";
 		final String DEAD_STATE = "0";
+		final String QUIT = "quit";
 		String optionChosen = "";
 
 		
@@ -33,8 +34,9 @@ public class ExamStateSandbox {
 		System.out.println ("1 for Alive");
 		System.out.println ("0 for Dead");
 		System.out.println ("-1 for Unknown");
+		System.out.println ("quit to Quit Program");
 
-		while (!optionChosen.equalsIgnoreCase(DEAD_STATE)) {
+		while (!optionChosen.equalsIgnoreCase(QUIT)) {
 			stateObject.alertState();
 			
 			try {
@@ -51,6 +53,9 @@ public class ExamStateSandbox {
 					stateObject.setState(new AliveState());
 					break;
 				case DEAD_STATE:
+					stateObject.setState(new DeadState());
+					break;
+				case QUIT:
 					stateObject.setState(new DeadState());
 					break;
 				default:
